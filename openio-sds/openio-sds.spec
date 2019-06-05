@@ -50,13 +50,12 @@ BuildRequires:  zookeeper-lib-devel      >= 3.3.4
 BuildRequires:  python-devel
 BuildRequires:  python-setuptools
 BuildRequires:  libcurl-devel
+BuildRequires:  zeromq-devel
 %if %{?suse_version}0
 BuildRequires:  libapr1-devel            >= 1.2
 BuildRequires:  apache2-devel            >= 2.2
 BuildRequires:  libjson-c-devel          >= 0.12
 BuildRequires:  libdb-6_0-devel
-BuildRequires:  zeromq-devel
-
 BuildRequires:  fdupes
 %else
 BuildRequires:  apr-devel                >= 1.2
@@ -64,7 +63,6 @@ BuildRequires:  httpd-devel              >= 2.2
 BuildRequires:  json-c                   >= 0.12
 BuildRequires:  json-c-devel             >= 0.12
 BuildRequires:  libdb-devel
-BuildRequires:  zeromq3-devel
 %endif
 BuildRequires:  sqlite-devel             >= 3.7.11
 BuildRequires:  libattr-devel            >= 2.4.32
@@ -422,6 +420,9 @@ fi
 /sbin/ldconfig
 
 %changelog
+* Mon Jun 03 2019 - 4.4.3-3 - Vladimir Dombrovski <vladimir@openio.io>
+- New release
+- Remove zeromq3-devel build dep
 * Mon Jun 03 2019 - 4.3.2-2 - Vladimir Dombrovski <vladimir@openio.io>
 - Remove python-zmq
 * Tue Feb 12 2019 - 4.3.2-1 - Vincent Legoll <vincent.legoll@openio.io>
